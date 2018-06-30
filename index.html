@@ -163,6 +163,136 @@
     
 </article>     
      	
+      	  	
+
+  		
+    	<article class="article">		
+	   
+	<div class="article-header">
+	    
+	     <a class="article-title" href="/2018/03/21/关于java和java虚拟机/">关于java和java虚拟机</a>  
+	       
+		 
+
+		<div class="article-meta">
+		
+		Mar 21, 2018
+
+		
+		</div>
+
+	</div>
+
+
+	
+
+    
+	<div class="article-excerpt">	
+		 
+			<p>1995年，sun公司发布JAVA1.0版本，至今已经发展了二十三年，java分为三个部分：</p>
+<ul>
+<li>java SE（标准版，主要写桌面程序）</li>
+<li>java EE（企业版，java语言最强大的领域）</li>
+<li>java ME（精简版，主要活跃于嵌入式开发）</li>
+</ul>
+<p>同样作为面向对象语言，java在抽象程度上比c++要高，对于业务编程，用java比用c++开发周期大大减少，互联网技术更新换代速度快，用java语言能更快适应环境的变化。</p>
+<h2 id="JAVA的跨平台特性-Write-Once，Run-Anywhere"><a href="#JAVA的跨平台特性-Write-Once，Run-Anywhere" class="headerlink" title="JAVA的跨平台特性  Write Once，Run Anywhere"></a>JAVA的跨平台特性  Write Once，Run Anywhere</h2><p>java程序的运行过程是先由前端解释器将java程序解释成二进制字节码文件（即<em>.class</em>文件），再将字节码文件加载进虚拟机JVM中执行。虽然不同平台虚拟机的内部实现机制有所不同，但是字节码的标准都只有一个。虽说是可以在不同平台上都能运行，但是这些平台上都必须要安装对应的虚拟机，虚拟机将字节码文件解释成能在自己平台上运行的可执行机器码</p>
+<h2 id="为什么说java跨平台而不说c"><a href="#为什么说java跨平台而不说c" class="headerlink" title="为什么说java跨平台而不说c++"></a>为什么说java跨平台而不说c++</h2><p>c++语言和java比较起来偏底层一点，c++程序的运行是直接由编译器将程序编译成二进制可执行文件（机器指令码比如汇编语言），这个可执行文件操作系统可以直接执行。不同的平台支持的可执行文件的格式不一样，比如说windows下是<em>.exe</em>文件，而linux下是<em>.sh</em>文件，在windows下编译出的c++程序在linux上是不能直接执行的。c++未经编译的源代码，是可以跨平台的。</p>
+<h2 id="HotSpot-VM"><a href="#HotSpot-VM" class="headerlink" title="HotSpot VM"></a>HotSpot VM</h2><p>HotSpot VM是目前来说性能最好的虚拟机，最开始由一个小公司研发，后该公司被sun公司收购。在sun公司的官方jdk和jre中都默认安装了该虚拟机。该虚拟机具有一个热点探测功能：探测程序中频繁使用的方法块和，将其标记为“热点代码块”，然后通过内部的双重即时编译器将热点代码块直接编译成机器码进行执行，大大提高程序性能。双重即时编译器：在虚拟机中既有解释器，也有编译器，可以直接指定虚拟机的工作模式，完全解释模式和完全编译模式，当然顾名思义，一个停止，完全让另一个工作。</p>
+<h2 id="前端编译器和语言无关性"><a href="#前端编译器和语言无关性" class="headerlink" title="前端编译器和语言无关性"></a>前端编译器和语言无关性</h2><p>前端编译器的工作内容是将程序源代码编译成字节码文件，默认的编译器都是jre中的<em>javac.exe</em>。在Eclipse中前端编译器是有Eclipse公司自己研发的<em>Eclipse Compiler for Java</em>编 译器即ECJ编译器。前端编译器的具体功能是：</p>
+<ol>
+<li>词法分析：将Java源码中的关键字和标识符等内容转换为符合标准的Java Token序列，然后按照指定的顺序进行匹配校验</li>
+<li>语法分析：将词法解析后的Token序列整合为一个结构化的抽象语法数，比如try-catch-finally，if-else，do-while之类的</li>
+<li>语义分析：将语法分析得到的语法树扩充得更加完善，完善后的语法树可以用来生成字节码文件</li>
+<li>生成字节码：执行字节码编译</li>
+</ol>
+<p>由于java的跨平台特性和字节码的规范唯一性，其实对于虚拟机来说，外部语言的种类是无所谓的，虚拟机只在乎加载的字节码文件是否是符合规范的。所以对此，其他的语言也都可以通过特定的编译器编译成符合java虚拟机规范的字节码文件，比如Ruby语言和JRuby编译器，JavaScript语言和Rhino编译器</p>
+
+		  	  
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2018/03/21/关于java和java虚拟机/">Continue</a> 	</div>	
+    
+</article>     
+     	
+      	  	
+
+  		
+    	<article class="article">		
+	   
+	<div class="article-header">
+	    
+	     <a class="article-title" href="/2018/03/19/Java类的加载和初始化/">Java类的加载和初始化</a>  
+	       
+		 
+
+		<div class="article-meta">
+		
+		Mar 19, 2018
+
+		
+		</div>
+
+	</div>
+
+
+	
+
+    
+	<div class="article-excerpt">	
+		 
+			<h2 id="静态数据的初始化"><a href="#静态数据的初始化" class="headerlink" title="静态数据的初始化"></a>静态数据的初始化</h2><p>程序的入口是main()方法，main()方法必定存在于某个类中，要执行main()方法，必定需要先初始化main所存在的这个类。<br>初始化这个类的顺序是： 先按顺序初始化静态方法和属性，若静态方法中调用了其他方法，那么这些方法的初始化顺序也将紧跟在调用他的这个静态方法之后，并且会执行方法的内容。静态数据初始化完毕后，再根据 main()方法内容执行非静态语句，初始化非静态内容。静态内容已经初始化，再次调用时不会再生成对象。</p>
+<h2 id="类的加载"><a href="#类的加载" class="headerlink" title="类的加载"></a>类的加载</h2><p>加载类的顺序是：加载类（生成class对象），连接（验证，准备，解析），初始化，使用，卸载。一个类的生命周期：从被加载进JVM，直到最终被卸载出内存</p>
+<h3 id="1-加载类：由类加载器根据一个类的全限定名称来读取这个类的二进制文件流到JVM内部，并储存在运行时内存区中的方法区中（静态储存区，储存类对象和静态数据），然后将其转换为一个与目标类型对应的java-lang-Class对象。"><a href="#1-加载类：由类加载器根据一个类的全限定名称来读取这个类的二进制文件流到JVM内部，并储存在运行时内存区中的方法区中（静态储存区，储存类对象和静态数据），然后将其转换为一个与目标类型对应的java-lang-Class对象。" class="headerlink" title="1.加载类：由类加载器根据一个类的全限定名称来读取这个类的二进制文件流到JVM内部，并储存在运行时内存区中的方法区中（静态储存区，储存类对象和静态数据），然后将其转换为一个与目标类型对应的java.lang.Class对象。"></a>1.加载类：由类加载器根据一个类的全限定名称来读取这个类的二进制文件流到JVM内部，并储存在运行时内存区中的方法区中（静态储存区，储存类对象和静态数据），然后将其转换为一个与目标类型对应的java.lang.Class对象。</h3><h3 id="2-连接：连接分为三个部分：验证。准备和解析："><a href="#2-连接：连接分为三个部分：验证。准备和解析：" class="headerlink" title="2.连接：连接分为三个部分：验证。准备和解析："></a>2.连接：连接分为三个部分：验证。准备和解析：</h3><h3 id="验证：验证类的数据信息是否符合JVM规范，是否是一个有效的字节码文件（编码格式），以及语义分析和操作验证"><a href="#验证：验证类的数据信息是否符合JVM规范，是否是一个有效的字节码文件（编码格式），以及语义分析和操作验证" class="headerlink" title="验证：验证类的数据信息是否符合JVM规范，是否是一个有效的字节码文件（编码格式），以及语义分析和操作验证"></a>验证：验证类的数据信息是否符合JVM规范，是否是一个有效的字节码文件（编码格式），以及语义分析和操作验证</h3><h3 id="准备：为类中的所有静态变量分配内存空间，并为其设置一个初始值"><a href="#准备：为类中的所有静态变量分配内存空间，并为其设置一个初始值" class="headerlink" title="准备：为类中的所有静态变量分配内存空间，并为其设置一个初始值"></a>准备：为类中的所有静态变量分配内存空间，并为其设置一个初始值</h3><h3 id="解析：将常量池中的所有符号全部转换为直接引用"><a href="#解析：将常量池中的所有符号全部转换为直接引用" class="headerlink" title="解析：将常量池中的所有符号全部转换为直接引用"></a>解析：将常量池中的所有符号全部转换为直接引用</h3><h3 id="3-初始化：执行所有有static关键字修饰的语句，如果用户自定义了static变量的值，则将用这些值替换掉系统默认分配的初值。"><a href="#3-初始化：执行所有有static关键字修饰的语句，如果用户自定义了static变量的值，则将用这些值替换掉系统默认分配的初值。" class="headerlink" title="3.初始化：执行所有有static关键字修饰的语句，如果用户自定义了static变量的值，则将用这些值替换掉系统默认分配的初值。"></a>3.初始化：执行所有有static关键字修饰的语句，如果用户自定义了static变量的值，则将用这些值替换掉系统默认分配的初值。</h3><h3 id="4-类加载器：根类是抽象类ClassLoader。类加载器分为两种：引导类加载器和自定义类加载器"><a href="#4-类加载器：根类是抽象类ClassLoader。类加载器分为两种：引导类加载器和自定义类加载器" class="headerlink" title="4.类加载器：根类是抽象类ClassLoader。类加载器分为两种：引导类加载器和自定义类加载器"></a>4.类加载器：根类是抽象类ClassLoader。类加载器分为两种：引导类加载器和自定义类加载器</h3><h3 id="启动类加载器一般分为三种：bootstrap-ClassLoader（启动类加载器，嵌套于JVM内部的特殊加载器），ExtClassLoader（扩展类加载器），AppClassLoader（应用类加载器），扩展类加载器是应用类加载器的父类加载器。"><a href="#启动类加载器一般分为三种：bootstrap-ClassLoader（启动类加载器，嵌套于JVM内部的特殊加载器），ExtClassLoader（扩展类加载器），AppClassLoader（应用类加载器），扩展类加载器是应用类加载器的父类加载器。" class="headerlink" title="启动类加载器一般分为三种：bootstrap ClassLoader（启动类加载器，嵌套于JVM内部的特殊加载器），ExtClassLoader（扩展类加载器），AppClassLoader（应用类加载器），扩展类加载器是应用类加载器的父类加载器。"></a>启动类加载器一般分为三种：bootstrap ClassLoader（启动类加载器，嵌套于JVM内部的特殊加载器），ExtClassLoader（扩展类加载器），AppClassLoader（应用类加载器），扩展类加载器是应用类加载器的父类加载器。</h3><h3 id="5-抽象类ClassLoader：继承了抽象类ClassLoader并实现了findClass-方法的类都叫做自定义类加载器"><a href="#5-抽象类ClassLoader：继承了抽象类ClassLoader并实现了findClass-方法的类都叫做自定义类加载器" class="headerlink" title="5.抽象类ClassLoader：继承了抽象类ClassLoader并实现了findClass()方法的类都叫做自定义类加载器"></a>5.抽象类ClassLoader：继承了抽象类ClassLoader并实现了findClass()方法的类都叫做自定义类加载器</h3>
+		  	  
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2018/03/19/Java类的加载和初始化/">Continue</a> 	</div>	
+    
+</article>     
+     	
+      	  	
+
+  		
+    	<article class="article">		
+	   
+	<div class="article-header">
+	    
+	     <a class="article-title" href="/2018/03/18/算法和数据结构笔记/">算法和数据结构笔记</a>  
+	       
+		 
+
+		<div class="article-meta">
+		
+		Mar 18, 2018
+
+		
+		</div>
+
+	</div>
+
+
+	
+
+    
+	<div class="article-excerpt">	
+		 
+			<h2 id="迭代和递归"><a href="#迭代和递归" class="headerlink" title="迭代和递归"></a>迭代和递归</h2><p>迭代如同重复同一步如for循环，递归是在方法中调用本方法，如二叉树的递归遍历算法。从迭代到递归，再从递归到迭代。</p>
+<h2 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h2><p>时间复杂度表示在程序运行过程中运行的步数，空间复杂度表示在方法中除了必要参数所占的空间外，自行定义的用来实现方法的变量所占的空间</p>
+<h3 id="递归分析的方法：递归跟踪和递推式"><a href="#递归分析的方法：递归跟踪和递推式" class="headerlink" title="递归分析的方法：递归跟踪和递推式"></a>递归分析的方法：递归跟踪和递推式</h3><p>递归跟踪：将递归的每一步递归实例线性地列出进行分析<br>递推式：根据递归跟踪得到的式子进行求解微分方程，得到T(n)的时间复杂度</p>
+<h3 id="递归的时间复杂度（数组求和）"><a href="#递归的时间复杂度（数组求和）" class="headerlink" title="递归的时间复杂度（数组求和）"></a>递归的时间复杂度（数组求和）</h3><p>SUM(A,n)生成子递归SUM(A n-1)时，SUM(A,n)并没有继续执行，SUM(A,n)的数据以“函数桢”的形式被压入栈中，同理，每一步递归在生成子递归后本身都不会再继续执行，每一步位O(1)，所以总时间复杂度O(n)</p>
+<h2 id="递归思想：减而治之和分而治之"><a href="#递归思想：减而治之和分而治之" class="headerlink" title="递归思想：减而治之和分而治之"></a>递归思想：减而治之和分而治之</h2><p>减而治之：将问题T(n)看成T(n-1)+O(1)，以此类推进行递归<br>分而治之：将问题T(n)看成T(n/2)+T(n/2)+O(1)，以此类推进行递归(二分法)</p>
+
+		  	  
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2018/03/18/算法和数据结构笔记/">Continue</a> 	</div>	
+    
+</article>     
+     	
   
 
 

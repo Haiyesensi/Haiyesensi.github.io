@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hello World |   hyss </title>
+  <title>  算法和数据结构笔记 |   hyss </title>
 
  
   
@@ -79,20 +79,20 @@
 	<div class="post-header">
 
 	<p class="post-title">	
-		Hello World
+		算法和数据结构笔记
 	</p>
 			
 
 	<div class="meta-info">	
 	<span>
-		Jun 30, 2018
+		Mar 18, 2018
 	</span>
 
 	
 	
 		<i class="iconfont icon-words"></i>
 		<span>
-			366
+			439
 		</span>
 	
 </div>
@@ -105,15 +105,11 @@
 		
 
 			
-					<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+					<h2 id="迭代和递归"><a href="#迭代和递归" class="headerlink" title="迭代和递归"></a>迭代和递归</h2><p>迭代如同重复同一步如for循环，递归是在方法中调用本方法，如二叉树的递归遍历算法。从迭代到递归，再从递归到迭代。</p>
+<h2 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h2><p>时间复杂度表示在程序运行过程中运行的步数，空间复杂度表示在方法中除了必要参数所占的空间外，自行定义的用来实现方法的变量所占的空间</p>
+<h3 id="递归分析的方法：递归跟踪和递推式"><a href="#递归分析的方法：递归跟踪和递推式" class="headerlink" title="递归分析的方法：递归跟踪和递推式"></a>递归分析的方法：递归跟踪和递推式</h3><p>递归跟踪：将递归的每一步递归实例线性地列出进行分析<br>递推式：根据递归跟踪得到的式子进行求解微分方程，得到T(n)的时间复杂度</p>
+<h3 id="递归的时间复杂度（数组求和）"><a href="#递归的时间复杂度（数组求和）" class="headerlink" title="递归的时间复杂度（数组求和）"></a>递归的时间复杂度（数组求和）</h3><p>SUM(A,n)生成子递归SUM(A n-1)时，SUM(A,n)并没有继续执行，SUM(A,n)的数据以“函数桢”的形式被压入栈中，同理，每一步递归在生成子递归后本身都不会再继续执行，每一步位O(1)，所以总时间复杂度O(n)</p>
+<h2 id="递归思想：减而治之和分而治之"><a href="#递归思想：减而治之和分而治之" class="headerlink" title="递归思想：减而治之和分而治之"></a>递归思想：减而治之和分而治之</h2><p>减而治之：将问题T(n)看成T(n-1)+O(1)，以此类推进行递归<br>分而治之：将问题T(n)看成T(n/2)+T(n/2)+O(1)，以此类推进行递归(二分法)</p>
   	
 					
 	  </div>     
@@ -168,11 +164,11 @@
 
       </div>  
     <nav class="pf-paginator">
-           
-        
       
+         
+          <a href="/2018/03/19/Java类的加载和初始化/" data-hover="Java类的加载和初始化">Prev</a>      
+            
         
-        <a href="/2018/03/21/关于java和java虚拟机/" data-hover="关于java和java虚拟机"> Next</a>
             
   </nav>   
   </div>
